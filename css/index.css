@@ -48,10 +48,16 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
-* {
-    box-sizing: inherit;
+
+* { 
+  box-sizing: border-box;
 }
 
+@media (max-width: 500px) {
+* {
+    box-sizing: inherit;
+  }
+}
 html, body {
     height: 100%;
     font-family: 'Titillium Web', sans-serif;
@@ -88,7 +94,7 @@ header {
 }
 
 header nav {
-  /* display: flex; */
+  display: flex;
   width: 691px;
   vertical-align: top;
   margin-top: 35px;
@@ -98,7 +104,7 @@ header nav {
   header nav {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 0%;
     /* margin-left: 70%;
     margin-top: 10px;
   } */
@@ -117,7 +123,7 @@ header nav a {
     flex-direction: column;
     /* justify-content: center; */
     width: 100%;
-    margin-left: 40%;
+    margin-left: 0%;
     /* margin-left: 70%; */
   }
 }
@@ -132,11 +138,11 @@ header nav a:first-child {
 }
 
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
   header nav a:first-child {
     margin-left: 40%;
   }
-}
+} */
 
 header nav a:last-child {
   margin-right: 0;
@@ -151,7 +157,8 @@ header .logo {
     display: flex;
     margin-top: 20px;
     width: 40%;
-    margin-left: 30%;
+    height: auto;
+    margin-left: 160px;
   }
 }
 
@@ -164,7 +171,8 @@ header .logo {
   .cta {
      display: flex;
      flex-direction: column;
-     margin-left: 0%;
+     /* margin-left: 0%; */
+     width: 100%;
    }
  }
 .cta .cta-text {
@@ -177,11 +185,10 @@ header .logo {
 
 @media (max-width: 500px) {
   .cta .cta-text {
-    vertical-align: top;
-    margin-top: 0;
-    padding: 0;
+    /* vertical-align: top; */
+    margin: 0;
     font-size: 65px;
-    text-align: center !important;
+    text-align: center;
    
   }
 }
@@ -207,8 +214,8 @@ header .logo {
      font-size: 16px;
      border: 1px solid black;
      cursor: pointer;
-     width: 20%;
-     margin-left: 35%;
+     /* width: 20%; */
+     margin-left: 25%;
      
    }
  }
@@ -227,10 +234,11 @@ header .logo {
 
 @media (max-width: 500px){
   .cta img {
-    display: flex;
-    margin-top: 15px;
+
+    display: none;
+    /* margin-top: 15px;
     width: 60%;
-    margin-left: 20%;
+    margin-left: 20%; */ */
   }
 }
 
